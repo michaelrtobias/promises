@@ -10,11 +10,11 @@
 
 var fs = require('fs');
 var Promise = require('bluebird');
-
+var pluckFirstLineFromFileAsync = require('./promiseConstructor').pluckFirstLineFromFileAsync;
 
 
 var fetchProfileAndWriteToFile = function(readFilePath, writeFilePath) {
-  // TODO
+  return pluckFirstLineFromFileAsync(readFilePath);
 };
 
 // Export these functions so we can test them
